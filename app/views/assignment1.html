@@ -140,6 +140,61 @@
     3. Create a grunt task to deploy your website to your own bucket in S3.
   </h2>
   <p>
+    Follow this link:
+    https://github.com/VincentBloom/not-your-average-grunt/blob/master/Gruntfile.js
+   <pre><code>
+  grunt.registerTask('deployToS3', 'Deploying to S3 bucket', function(target){
+    var done = this.async();
+    var command = "/usr/local/bin/aws";
+    var child = grunt.util.spawn({
+      cmd: command,
+      args: 's3 sync --acl=public-read dist s3://not-your-average-grunt'.split(" "),
+      opts: {
 
+        stdio: 'inherit'
+      }
+    }, function(error, result, code){
+      if(code != 0 && error !== null) grunt.fatal("Error sycing with S3 bucket.");
+      grunt.log.writeln(String(result).trim());
+      done();
+    });
+
+  });
+</code></pre>
+    Resources used: http://gruntjs.com/api/grunt.util<br>
+  http://otobrglez.opalab.com/front-end/2015/04/20/grunt-s3-deployment-sync-s3cmd.html<br>
   </p>
+</section>
+
+<section>
+  <h2>4. Explain how routes work in angular and a code example. </h2>
+  <p>
+    Angular Routes and routing enable developers to create views in their own files and having different URLs to access requested views. Angular has a container div ng-view, found in the index.html development code. The containing sections are swapped out dynamically using routes.
+    Routing loads a template requested by the user, which is then stored in templateCache when another template is visited. If the user visits a previously visited view, the content is loaded from templateCache instead of requesting it from the server.
+    Routes are specified in app.js, the main module of the application. They work through events fired through the $routeProvider.
+  </p>
+  <pre><code>
+    angular.config(function ($routeProvider) {
+    $routeProvider
+      .when('/', {
+        templateUrl: 'views/main.html',
+        controller: 'MainCtrl',
+        controllerAs: 'main'
+      })
+      .when('/about', {
+        templateUrl: 'views/about.html',
+        controller: 'AboutCtrl',
+        controllerAs: 'about'
+      })
+.otherwise({
+        	redirectTo: '/'
+      });
+  });
+  </code></pre>
+</section>
+
+<section>
+  <h2>
+
+  </h2>
 </section>
