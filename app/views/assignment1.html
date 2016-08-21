@@ -195,6 +195,39 @@
 
 <section>
   <h2>
-
+    5. Explain how you can have more than one access key in your computer and how to use each one. Provide code or conﬁguration examples.
   </h2>
+  <p>
+    Multiple sets of credentials can be set up and stored in the .aws/credentials file in Unix systems. The default credentials must always exist, and the rest can be added as needed.
+  </p>
+  <pre><code>
+    [default]
+AWS_ACCESS_KEY_ID = DEFAULT_ACCESS_KEY
+AWS_SECRET_ACCESS_KEY = DEFAULT_SECRET_KEY
+
+[profile_1]
+AWS_ACCESS_KEY_ID = PROFILE_1_ACCESS_KEY
+AWS_SECRET_ACCESS_KEY = PROFILE_1_SECRET_KEY
+
+[profile_2]
+AWS_ACCESS_KEY_ID = PROFILE_2_ACCESS_KEY_
+AWS_SECRET_ACCESS_KEY = PROFILE_2_SECRET_KEY
+
+  </code></pre>
+  To run any instruction using a set of credentials with the AWS CLI, you must use the --profile option:
+  <code>$ aws action --profile CUSTOM_PROFILE</code>
+</section>
+
+<section>
+  <h2>6. Explain what are you going to do different this semester based on last semester experience. </h2>
+  <p>
+    I will definitely not leave the final project to the end of the semester.
+    I will stay on top of the tasks related
+    to the final project and continuously deliver updates.
+    I will work better with my teammates by communicating better.
+    I will set myself limits and I will not break myself. That is an unnecessary waste of heartbeats.
+    I will complete all assignments, even if it means I have to turn them in late or not turn them in.
+    I will strive to get every extra point possible.
+    I will read a book and wirte a report on it.
+  </p>
 </section>

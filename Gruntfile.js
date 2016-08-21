@@ -423,19 +423,6 @@ module.exports = function (grunt) {
         configFile: 'test/karma.conf.js',
         singleRun: true
       }
-    },
-
-    aws: grunt.file.readJSON("credentials.json"),
-    s3: {
-      options: {
-        bucket: 'not-your-average-grunt',
-        access: 'public-read'
-      },
-      upload:
-      {
-        src: 'dist',
-        dest: '/'
-      }
     }
 
   });

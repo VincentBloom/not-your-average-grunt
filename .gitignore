@@ -4,3 +4,6 @@
 /.sass-cache
 /bower_components
 deploy-keys.json
+.gitignore
+/.idea
+./idea
