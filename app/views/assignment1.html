@@ -1,0 +1,145 @@
+<h1>Assignment 1</h1>
+<caption>Due date: 2016-08-20</caption>
+<caption>Vincent Bernard Bloom Guerrero #18462</caption>
+
+<section>
+<h2>1. Read the following article http://martinfowler.com/articles/microservices.html and explain what "Microservices Architecture" means.</h2>
+<p>
+  Microservices is almost the direct contrast to the monotlithic application architecture, where the application is
+  seperated into a series of representative services that can be maintaned, swapped and interacted with easier than
+  traditional architecture softwares. Each service has its own group of development teams that build, deploy and
+  maintain their respective components. The services are broken up and scattered across servers as needed. Each
+  microservice can be considered to be a product on its own that complements other products built in this framework, with
+  the end result of an application. It focuses more on making the endpoints manage logic and moving resources by simple
+  HTTP requests.
+</p>
+</section>
+
+<section>
+<h2>2. Explain each line of the <code>cc499-setup.sh</code> file.</h2>
+  <code>
+    #!/bin/bash
+  </code>
+  <p>
+    <code>#!</code> : When being the first two bytes of an executable file, interpreted by the execve(2) system call to execute. It must be followed by an absolute path.<br>
+    <code>/bin/bash</code> : *nix path to Bash interpreter. “Bourne-again shell”<br>
+  </p>
+  <code>
+    echo "Start. We are about to setup the environment for your Cloud Compting class. Excited?"
+  </code>
+  <p>
+    <code>echo</code> : Write a message to screen/terminal.<br>
+  </p>
+  <p>
+    <code> cd $HOME </code> : Change directory to the home directory of the current user. Equivalent to <code>~</code>
+    in other contexts.
+  </p>
+  <p>
+    <code>mkdir Projects</code> : Create a new folder in $HOME named projects.
+  </p>
+  <p><code>
+    mkdir .aws
+  </code> : Creates a new hidden folder in $HOME name .aws. Dot folders and files are hidden, which means they are
+    normally invisible.</p>
+  <p><code>
+    cd .aws
+  </code> : Change directory to the new directory created .aws.</p>
+  <p><code>
+    touch credentials
+  </code> : Change or create a file timestamp, access or modification times. If used with a nonexistent file, creates a
+    file. Creates a file called credentials in folder .aws.</p>
+  <p>
+    <code>
+      cd ..
+    </code> : Referes to the parent folder of the current directory. Changes back to $HOME.
+  </p>
+  <p>
+    <code>sudo apt-get update</code> : Execute a command or statement as the superuser. For Debian distributions,
+    searches and installs packages from repositories. Updates the update list for all packages installed.
+  </p>
+  <p>
+    <code>
+      sudo apt-get install -f
+    </code> : Installs suggested packages from suggested update key list. Fix broken dependencies apt-get dependencies.
+  </p>
+  <p>
+    <code>
+      sudo apt-get install git
+    </code> : Installs git version control system.
+  </p>
+  <p>
+    <code>
+      sudo apt-get install nodejs
+    </code> : Installs node.js, a server-side runtime environment primarily designed for server-side Web apps.
+  </p>
+  <p>
+    <code>
+      sudo apt-get install npm
+    </code> : Node Package Manager. Manages node.js’ libraries, packages and projects.
+  </p>
+  <p>
+    <code>
+      sudo ln -s /usr/bin/nodejs /usr/bin/node
+    </code> : Create a symbolic link (symlink) between two files. Associates a file or a directory with another file or
+    directory. Makes a soft symlink instead of a hard symlink, tracking and following the destination file or folder.
+    Associates node to nodejs, to avoid conflict with other services named node.
+  </p>
+  <p>
+    <code>
+      sudo apt-get -y install python-pip
+    </code> : Sends a yes to all prompts from the installation process. Pip is a package management system to install
+    and manage Python packages.
+  </p>
+  <p>
+    <code>
+      sudo pip install --upgrade pip
+    </code> : Upgrades newest versions of the pip packagery.
+  </p>
+  <p>
+    <code>
+      sudo pip install awscli --ignore-installed six
+    </code> : Installs Amazon Web Services Command Line Interface, ignoring the Python package six that may enter in
+    conflict.
+  </p>
+  <p>
+    <code>
+      sudo npm install -g yo
+    </code> : Installs yeoman templating and scaffolding framework.
+  </p>
+  <p>
+    <pre><code>
+      sudo npm install -g grunt-cli
+      sudo npm install -g serverless
+    </code></pre> : Installs gruntjs, scripting tool to automate services. Serverless for node to build and manage apps
+  using AWS.
+  </p>
+  <p>
+    <code>
+      sudo apt-get install curl libunwind8 gettext
+    </code> : Installs curl, libunwind8 and gettext. CURL to manage URL redirections for clients, LibunWind8 to determine
+    the call order of executions, and gettext to write in different languages for Unix systems.
+  </p>
+<p>
+  <code>
+    curl -sSL -o dotnet.tar.gz https://go.microsoft.com/fwlink/?LinkID=809130
+  </code> : Downloads .NET dev tools for Debian.
+</p>
+  <p><code>
+    sudo mkdir -p /opt/dotnet && sudo tar zxf dotnet.tar.gz -C /opt/dotnet
+  </code> : Decompresses the package just downloaded and moves it to the /opt/dotnet directory just created.</p>
+  <p>
+    <code>
+      sudo ln -s /opt/dotnet/dotnet /usr/local/bin
+    </code> : Makes a symbolic link to the new dev tools to be able to be used in Terminal.
+  </p>
+
+</section>
+
+<section>
+  <h2>
+    3. Create a grunt task to deploy your website to your own bucket in S3.
+  </h2>
+  <p>
+
+  </p>
+</section>

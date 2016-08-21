@@ -220,7 +220,7 @@ module.exports = function (grunt) {
             }
           }
       }
-    }, 
+    },
 
     // Renames files for browser caching purposes
     filerev: {
@@ -423,7 +423,21 @@ module.exports = function (grunt) {
         configFile: 'test/karma.conf.js',
         singleRun: true
       }
+    },
+
+    aws: grunt.file.readJSON("credentials.json"),
+    s3: {
+      options: {
+        bucket: 'not-your-average-grunt',
+        access: 'public-read'
+      },
+      upload:
+      {
+        src: 'dist',
+        dest: '/'
+      }
     }
+
   });
 
 
@@ -480,4 +494,24 @@ module.exports = function (grunt) {
     'test',
     'build'
   ]);
+
+  grunt.registerTask('deployToS3', 'Deploying to S3 bucket', function(target){
+    var done = this.async();
+    var command = "/usr/local/bin/aws";
+
+    var child = grunt.util.spawn({
+      cmd: command,
+      args: 's3 sync --acl=public-read dist s3://not-your-average-grunt'.split(" "),
+      opts: {
+        stdio: 'inherit'
+      }
+    }, function(error, result, code){
+      if(code != 0 && error !== null) grunt.fatal("Error sycing with S3 bucket.");
+
+      grunt.log.writeln(String(result).trim());
+
+      done();
+    });
+
+  });
 };
