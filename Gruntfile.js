@@ -501,4 +501,9 @@ module.exports = function (grunt) {
     });
 
   });
+
+  grunt.registerTask('S3-sync', [
+    'build',
+    'deployToS3'
+  ]);
 };
