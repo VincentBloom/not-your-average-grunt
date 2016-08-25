@@ -1,21 +1,22 @@
 <h1>Assignment 1</h1>
 <caption>Due date: 2016-08-20</caption>
 <caption>Vincent Bernard Bloom Guerrero #18462</caption>
+<caption>GitHub: <a href="https://github.com/VincentBloom/not-your-average-grunt">not-your-average-grunt</a>.</caption>
+<hr>
 
-<section>
-<h2>1. Read the following article http://martinfowler.com/articles/microservices.html and explain what "Microservices Architecture" means.</h2>
-<p>
-  Microservices is almost the direct contrast to the monotlithic application architecture, where the application is
-  seperated into a series of representative services that can be maintaned, swapped and interacted with easier than
-  traditional architecture softwares. Each service has its own group of development teams that build, deploy and
-  maintain their respective components. The services are broken up and scattered across servers as needed. Each
-  microservice can be considered to be a product on its own that complements other products built in this framework, with
-  the end result of an application. It focuses more on making the endpoints manage logic and moving resources by simple
-  HTTP requests.
-</p>
+<section id="question1">
+  <h2>1. Read the following article http://martinfowler.com/articles/microservices.html and explain what "Microservices
+    Architecture" means.</h2>
+  <p>Microservices is almost the direct contrast to the monotlithic application architecture, where the application is
+    seperated into a series of representative services that can be maintaned, swapped and interacted with easier than
+    traditional architecture softwares. Each service has its own group of development teams that build, deploy and
+    maintain their respective components. The services are broken up and scattered across servers as needed. Each
+    microservice can be considered to be a product on its own that complements other products built in this framework,
+    with the end result of an application. It focuses more on making the endpoints manage logic and moving resources by
+    simple HTTP requests.</p>
 </section>
 
-<section>
+<section id="question2">
 <h2>2. Explain each line of the <code>cc499-setup.sh</code> file.</h2>
   <code>
     #!/bin/bash
@@ -108,9 +109,9 @@
   </p>
   <p>
     <pre><code>
-      sudo npm install -g grunt-cli
-      sudo npm install -g serverless
-    </code></pre> : Installs gruntjs, scripting tool to automate services. Serverless for node to build and manage apps
+sudo npm install -g grunt-cli
+sudo npm install -g serverless
+  </code></pre> : Installs gruntjs, scripting tool to automate services. Serverless for node to build and manage apps
   using AWS.
   </p>
   <p>
@@ -135,38 +136,40 @@
 
 </section>
 
-<section>
+<section id="question3">
   <h2>
     3. Create a grunt task to deploy your website to your own bucket in S3.
   </h2>
   <p>
     Follow this link:
     https://github.com/VincentBloom/not-your-average-grunt/blob/master/Gruntfile.js
-   <pre><code>
-  grunt.registerTask('deployToS3', 'Deploying to S3 bucket', function(target){
-    var done = this.async();
-    var command = "/usr/local/bin/aws";
-    var child = grunt.util.spawn({
-      cmd: command,
-      args: 's3 sync --acl=public-read dist s3://not-your-average-grunt'.split(" "),
-      opts: {
-
-        stdio: 'inherit'
-      }
-    }, function(error, result, code){
-      if(code != 0 && error !== null) grunt.fatal("Error sycing with S3 bucket.");
-      grunt.log.writeln(String(result).trim());
-      done();
-    });
-
+    <pre><code>
+grunt.registerTask('deployToS3', 'Deploying to S3 bucket', function(target){
+  var done = this.async();
+  var command = "/usr/local/bin/aws";
+  var child = grunt.util.spawn({
+    cmd: command,
+    args: 's3 sync --acl=public-read dist s3://not-your-average-grunt'.split(" "),
+    opts: {
+      stdio: 'inherit'
+    }
+  }, function(error, result, code){
+    if(code != 0 && error !== null) grunt.fatal("Error sycing with S3 bucket.");
+    grunt.log.writeln(String(result).trim());
+    done();
   });
-</code></pre>
-    Resources used: http://gruntjs.com/api/grunt.util<br>
-  http://otobrglez.opalab.com/front-end/2015/04/20/grunt-s3-deployment-sync-s3cmd.html<br>
+});
+    </code></pre>
+    Resources used:
+    <ul>
+      <li><a href="http://gruntjs.com/api/grunt.util">GruntJS API documentation</a>.</li>
+      <li><a href="http://otobrglez.opalab.com/front-end/2015/04/20/grunt-s3-deployment-sync-s3cmd.html">Otto Brglz</a>.
+      </li>
+    </ul>
   </p>
 </section>
 
-<section>
+<section id="question4">
   <h2>4. Explain how routes work in angular and a code example. </h2>
   <p>
     Angular Routes and routing enable developers to create views in their own files and having different URLs to access requested views. Angular has a container div ng-view, found in the index.html development code. The containing sections are swapped out dynamically using routes.
@@ -174,34 +177,32 @@
     Routes are specified in app.js, the main module of the application. They work through events fired through the $routeProvider.
   </p>
   <pre><code>
-    angular.config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
-      })
-.otherwise({
-        	redirectTo: '/'
-      });
+angular.config(function ($routeProvider) {
+  $routeProvider
+    .when('/', {
+      templateUrl: 'views/main.html',
+      controller: 'MainCtrl',
+      controllerAs: 'main'
+    })
+    .when('/about', {
+      templateUrl: 'views/about.html',
+      controller: 'AboutCtrl',
+      controllerAs: 'about'
+    })
+    .otherwise({
+      redirectTo: '/'
+    });
   });
   </code></pre>
 </section>
 
-<section>
-  <h2>
-    5. Explain how you can have more than one access key in your computer and how to use each one. Provide code or conﬁguration examples.
-  </h2>
-  <p>
-    Multiple sets of credentials can be set up and stored in the .aws/credentials file in Unix systems. The default credentials must always exist, and the rest can be added as needed.
-  </p>
+<section id="question5">
+  <h2>5. Explain how you can have more than one access key in your computer and how to use each one. Provide code or
+    conﬁguration examples.</h2>
+  <p>Multiple sets of credentials can be set up and stored in the .aws/credentials file in Unix systems. The default
+    credentials must always exist, and the rest can be added as needed.</p>
   <pre><code>
-    [default]
+[default]
 AWS_ACCESS_KEY_ID = DEFAULT_ACCESS_KEY
 AWS_SECRET_ACCESS_KEY = DEFAULT_SECRET_KEY
 
@@ -212,22 +213,20 @@ AWS_SECRET_ACCESS_KEY = PROFILE_1_SECRET_KEY
 [profile_2]
 AWS_ACCESS_KEY_ID = PROFILE_2_ACCESS_KEY_
 AWS_SECRET_ACCESS_KEY = PROFILE_2_SECRET_KEY
-
   </code></pre>
   To run any instruction using a set of credentials with the AWS CLI, you must use the --profile option:
   <code>$ aws action --profile CUSTOM_PROFILE</code>
 </section>
 
-<section>
+<section id="question6">
   <h2>6. Explain what are you going to do different this semester based on last semester experience. </h2>
-  <p>
-    I will definitely not leave the final project to the end of the semester.
-    I will stay on top of the tasks related
-    to the final project and continuously deliver updates.
-    I will work better with my teammates by communicating better.
-    I will set myself limits and I will not break myself. That is an unnecessary waste of heartbeats.
-    I will complete all assignments, even if it means I have to turn them in late or not turn them in.
-    I will strive to get every extra point possible.
-    I will read a book and wirte a report on it.
-  </p>
+  <ul>
+    <li>I will definitely not leave the final project to the end of the semester.</li>
+    <li>I will stay on top of the tasks related to the final project and continuously deliver updates.</li>
+    <li>I will work better with my teammates by communicating better.</li>
+    <li>I will set myself limits and I will not break myself. That is an unnecessary waste of heartbeats.</li>
+    <li>I will complete all assignments, even if it means I have to turn them in late or not turn them in.</li>
+    <li>I will strive to get every extra point possible.</li>
+    <li>I will read a book and wirte a report on it.</li>
+  </ul>
 </section>
