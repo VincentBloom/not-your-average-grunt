@@ -121,7 +121,40 @@ npm install aws-sdk --save-dev
   <h2>5. Read and explain the post about Microservices Trade-Offs by Martin Fowler (<a
     href="http://martinfowler.com/articles/microservice-trade-offs.html" target="_blank">
     http://martinfowler.com/articles/microservice-trade-offs.html</a>). <b>15 points.</b></h2>
-  <p>Martin Fowler </p>
+  <p>Martin Fowler outlines 3 benefits and 3 costs when it comes to using the microservices architectural style,
+  comparing it with monolithic architectural style. The three pros are:</p>
+  <h3>Pros</h3>
+  <h4>Strong Module Boundaries</h4>
+  <p>By splitting processes up into microservices, you can define each module's boundaries more easily. Each team takes on
+  specific responsibilities that are exclusive to their teams. Interoperability only happens through small gateways,
+  so you reduce coupling that happens more often in monolithic applications.</p>
+  <h4>Independent Deployment</h4>
+  <p>Each microservice is responsible to deploy on its own, independently from other microservices. This allows for
+    better continuous delivery (easier to achieve) as it is not necessary to worry so much over the breaking of
+    the complete service.</p>
+  <h4>Technology Diversity</h4>
+  <p>Complementing the Strong Module Boundaries point, this pro enables teams and their respective microservices
+  to run using any platform they want to, giving them the liberty of developing how they want with limited
+  restrictions. They only have to worry that their inputs and outputs are managed transparently.</p>
+  <h3>Cons</h3>
+  <h4>Distribution</h4>
+  <p>Since the microservices architectural style implies distribution, this can prove to be costly for performance
+  if not done right. Remote calls are slower than in-process calls, and if not careful, too many remote calls to
+  too many services may cripple the application's usability.</p>
+  <h4>Eventual Consistency.</h4>
+  <p>Consistency is easily maintined when in first stages of development. But when projects done in the microservices
+  model grow, their consistency may be in jeaopardy. Well-defined boundaries and understanding the domain of the
+  application are what keep the application consistent.</p>
+  <h4>Operational Complexity.</h4>
+  <p>Similar to the point before, once an appliction becomes big and seemingly unmanageable, only maturity can
+  prevent it from corroding. Mature teams must keep the architecture's integrity while providing services and
+  still continuously deploy.</p>
+  <br>
+  <p>Although the microservices architectural model may be appealing for developers for its modernitity and
+  its show of promise, one must keep in mind that it is a fairly recent model that mostly only experienced
+  teams of developers have experimented with. It is true that within monolithic applications one must try to
+  practice good habits and show discipline. Microservices come with their own costs and can become gooey and
+  muddy if done wrong.</p>
 </section>
 
 <section id="question6">
@@ -504,5 +537,16 @@ npm install aws-sdk --save-dev
 <section id="question7">
   <h2>7. Read at least 5 sections of Seth Godin’s Manifesto: “Stop Stealing Dreams” and tell me what you think about it.
     <b>10 points.</b></h2>
-  <p></p>
+  11. To efficiently run a school, amplify fear (and destroy passion).
+
+  <p>My dad was born in the 50's. He lived through the hype of standardized US education. He was tought a trade and
+  was set-up to be a mechanic. Though what education was not able to point out was his brilliance. He was diagnosed
+  early with a form of ADD, and as the educational system failed to cope with his special characteristics, it
+  was tried to hard-press him into being a regular studend. He suffered through his elementary and middle schoo
+  years, enough for it to be one of the reasons why he ran away at age 17.</p>
+  <p>I feel the same injustice has been applied to me and my peers. Though I do not think that I was born with the
+  same capacity as my father, I do believe that I can achieve extraordinary things. Not to undermine the abilities
+  and the intelligence of my peers, I am only speaking for myself. I do think that the current model of education is
+  flawed, as it tries to fit every kid and teenager into a box that has no flexibility. </p>
+  <p><a href="http://www.sethgodin.com/sg/docs/StopStealingDreamsSCREEN.pdf" target="_blank">Stop Stealing Dreams</a></p>
 </section>
