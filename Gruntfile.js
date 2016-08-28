@@ -489,17 +489,11 @@ module.exports = function (grunt) {
     var child = grunt.util.spawn({
       cmd: command,
       args: 's3 sync --acl=public-read dist s3://not-your-average-grunt'.split(" "),
-      opts: {
-        stdio: 'inherit'
-      }
     }, function(error, result, code){
       if(code != 0 && error !== null) grunt.fatal("Error sycing with S3 bucket.");
-
       grunt.log.writeln(String(result).trim());
-
       done();
     });
-
   });
 
   grunt.registerTask('S3-sync', [
