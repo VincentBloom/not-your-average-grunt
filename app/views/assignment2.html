@@ -1,0 +1,508 @@
+<h1>Assignment 2</h1>
+<caption>Due date: 2016-08-27</caption>
+<caption>Vincent Bernard Bloom Guerrero #18462</caption>
+<caption>GitHub: <a href="https://github.com/VincentBloom/not-your-average-grunt" target="_blank">not-your-average-grunt
+</a>.</caption>
+<hr>
+
+<section id="question1">
+  <h2>1. Automate the deployment of your web site using Grunt. <b>15 points.</b></h2>
+  <p><a href="#/assignment1#question3" target="_blank">Code is here</a>.</p>
+</section>
+
+<section id="question2">
+  <h2>2. Create a Hello World in NodeJs and create a tutorial about it. <b>15 points.</b></h2>
+  <h3>Part 1. Installing Node.js</h3>
+  Note: Using Ubuntu 16.04.02. Check your local OS to know how to install.
+  <ol>
+    <li>Open Terminal (<code>Cntrl</code>+<code>Alt</code>+<code>t</code>, on desktop).</li>
+    <li>Run the following commands. Using the <code>apt</code> packet manager to refresh the local package index. Then
+      run the next command to install or refresh the Node.js installation.
+      <pre><code>
+sudo apt-get update
+sudo apt-get install nodejs
+      </code></pre>
+    </li>
+    <li>Install the Node Package Manager, which will allow us to manage packages in Node.js for the later question.
+    <pre><code>
+sudo apt-get install npm
+    </code></pre>
+    </li>
+  </ol>
+  <h3>Part 2. Creating your first Node.js program.</h3>
+  <ol>
+    <li>Create a file named <code>Hello.js</code>. To do so, run the following command:
+    <pre><code>
+sudo gedit Hello.js
+    </code></pre>
+    We will use Gedit (a simple text editor) to create a file. This command will open Gedit and name the file
+    <code>Hello.js</code>. Do not close Terminal or your document will not save unless saved.</li>
+    <li>In Gedit, type:
+    <pre><code>
+console.log('Hello world!');
+    </code></pre>
+      This command tells the console to output <code>Hello world!</code>. Such a simple program!
+    </li>
+    <li>Save the document created by doing the command <code>Ctrl</code>+<code>S</code>. Close the document by
+    running the command <code>Alt</code>+<code>F4</code>.</li>
+    <li>Run the javascript file you just created by typing in the same console instance:
+    <pre><code>
+nodejs Hello
+    </code></pre>
+    Note that you do not need the extension to run this command! Important: You must be in the same directory as
+    your <code>Hello.js</code> file for this to work.
+    The console should display in a new line <code>Hello world!</code>.</li>
+    <li>There you have it, you just installed Node.js, created your first Node.js program and ran it!</li>
+  </ol>
+</section>
+
+<section id="question3">
+  <h2>3. Install the aws sdk for nodejs and create a tutorial about it. <b>15 points.</b></h2>
+  <h3>Part 1. Create an empty project with node.</h3>
+  <ol>
+    <li>Open terminal, like in previous step.</li>
+    <li><code>cd</code> into a desired directory where you wish to create a Node.js project. For example:
+    <pre><code>
+cd Documents
+    </code></pre></li>
+    <li>Create a new directory in which your project will be held. In this example the project will be named <code>
+      BlankProject</code>.
+    <pre><code>
+mkdir BlankProject
+    </code></pre></li>
+    <li><code>cd</code> into your newly created directory.
+      <pre><code>
+cd BlankProject
+      </code></pre>
+    </li>
+    <li>
+      Create a new Node.js project! We will use the Node Package Manager to aid us here. It will create us a <code>
+      package.json</code> file to which we will be able to control our Node.js package installations.
+    <pre><code>
+npm init -f
+    </code></pre>
+      We use the <code>-f</code> option because we just want a blank default Node.js project. The output of this command
+      is what the <code>package.json</code> looks like!
+    </li>
+  </ol>
+  <h3>Part 2. Install AWS SDK in Node.js</h3>
+  <p>Make sure that you are in the correct directory, the root of your newly created Node.js project. Run the command:
+  <pre><code>
+npm install aws-sdk --save-dev
+  </code></pre>
+  This will download and install the Amazon Web Services SDK for use of your current project. The <code>--save-dev
+</code> modifiers make sure that the referenced package is saved in <code>package.json</code> to allow free
+  distribution of your project, saving the dependencies for developer use.</p>
+  Resources used:
+  <ul>
+    <li><a href="https://docs.npmjs.com/cli/init" target="_blank">npm-init; Interactively create a package.json file</a>
+    .</li>
+    <li><a href="http://docs.aws.amazon.com/AWSJavaScriptSDK/guide/node-intro.html" target="_blank">Getting Started with
+      the SDK in Node.js</a>.</li>
+  </ul>
+  </p>
+</section>
+
+<section id="question4">
+  <h2>4. Create a code in NodeJs that will tell you the version/date of your website in S3. <b>15 points.</b></h2>
+  <p>Visit my GitHub to view code!
+    <a href="https://github.com/VincentBloom/not-your-average-grunt/blob/master/assignments/s3-version-teller.js"
+       target="_blank">s3-version-teller.js</a>
+    Resources used:
+    <ul>
+      <li><a href="http://stackoverflow.com/a/493018">Stack Overflow</a>.</li>
+      <li><a href="http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#listObjectVersions-property">AWS SDK
+      API Documentation for S3</a>.</li>
+    </ul>
+  </p>
+</section>
+
+<section id="question5">
+  <h2>5. Read and explain the post about Microservices Trade-Offs by Martin Fowler (<a
+    href="http://martinfowler.com/articles/microservice-trade-offs.html" target="_blank">
+    http://martinfowler.com/articles/microservice-trade-offs.html</a>). <b>15 points.</b></h2>
+  <p>Martin Fowler </p>
+</section>
+
+<section id="question6">
+  <h2>6. Create a comparison table between AWS, Azure and Google Cloud. <b>15 points.</b></h2>
+  <p>
+    <table class="table">
+      <tr>
+        <th></th>
+        <th>AWS</th>
+        <th>Azure</th>
+        <th>Google Cloud</th>
+      </tr>
+      <tr>
+        <td>Services</td>
+        <td>
+          Compute:
+          <ul>
+            <li>Virtual servers.</li>
+            <li>Containers.</li>
+            <li>1-click web app deployment.</li>
+            <li>Event-driven compute functions.</li>
+            <li>Auto scaling.</li>
+            <li>Load balancing.</li>
+          </ul>
+          Storage & content delivery:
+          <ul>
+            <li>Object storage.</li>
+            <li>CDN.</li>
+            <li>Block storage.</li>
+            <li>File system storage.</li>
+            <li>Archive storage.</li>
+            <li>Data transport.</li>
+            <li>Integrated storage.</li>
+          </ul>
+          Database:
+          <ul>
+            <li>Relationsal.</li>
+            <li>Database migration.</li>
+            <Li>NoSQL.</Li>
+            <li>Caching.</li>
+            <li>Data warehouse.</li>
+          </ul>
+          Networking:
+          <ul>
+            <li>Virtual Private Cloud.</li>
+            <Li>Direct connections.</Li>
+            <Li>Load balancing.</Li>
+            <li>DNS.</li>
+          </ul>
+          Analytics:
+          <ul>
+            <li>Business intelligence.</li>
+            <li>Data warehouse.</li>
+            <li>Machine learning.</li>
+            <Li>Streaming data.</Li>
+            <Li>Elasticsearch.</Li>
+            <Li>Hadoop.</Li>
+            <li>Data pipelines.</li>
+          </ul>
+          Enterprise applications:
+          <ul>
+            <li>Desktop virtualization.</li>
+            <li>Email & calendaring.</li>
+            <li>Document sharing & feedback.</li>
+          </ul>
+          Mobile services:
+          <ul>
+            <li>Mobile development.</li>
+            <li>API management.</li>
+            <Li>Identity.</Li>
+            <li>App testing.</li>
+            <li>Mobile analytics.</li>
+            <li>Development.</li>
+            <li>Notifications.</li>
+          </ul>
+          Internet of Things:
+          <ul>
+            <li>IoT platform.</li>
+            <Li>Device SDK.</Li>
+            <Li>Registry.</Li>
+            <li>Device shadows.</li>
+            <Li>Rules engine.</Li>
+          </ul>
+          Developer tools:
+          <ul>
+            <li>Source code management.</li>
+            <li>Code deployment.</li>
+            <li>Continuous delivery.</li>
+          </ul>
+          Management tools:
+          <ul>
+            <li>Monitoring & logs.</li>
+            <Li>Resource templatse.</Li>
+            <li>Usage & resource auditing.</li>
+            <li>DevOps resource managment.</li>
+            <li>Service catalog.</li>
+            <li>Performance optimization.</li>
+          </ul>
+          Security & identity:
+          <ul>
+            <li>Access control.</li>
+            <li>SSL/TLS certificates.</li>
+            <Li>Key storage & management.</Li>
+            <Li>Identity management.</Li>
+            <li>Security assesment.</li>
+            <li>Web app firewall.</li>
+          </ul>
+          Application services:
+          <ul>
+            <li>API management.</li>
+            <li>App streaming.</li>
+            <li>Search.</li>
+            <li>Transcoding.</li>
+            <li>Email.</li>
+            <Li>Notifications.</Li>
+            <li>Queueing.</li>
+            <li>Worklfow.</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>Virtual machines.</li>
+            <li>App service.</li>
+            <li>SQL database.</li>
+            <li>Storage.</li>
+            <li>Cloud services.</li>
+            <li>DocumentDB.</li>
+            <li>Azure Active Directory.</li>
+            <li>Backup.</li>
+            <li>HDInsight.</li>
+            <li>RemoteApp.</li>
+            <li>Batch.</li>
+            <li>StorSimple.</li>
+            <li>Visual Studio Team Services.</li>
+            <li>API management.</li>
+            <li>Azure IoT Hub.</li>
+            <li>CDN.</li>
+            <li>ExpressRoute.</li>
+            <Li>Site Recovery.</Li>
+            <li>Azure DNS.</li>
+            <li>Machine learning.</li>
+            <li>Service fabric.</li>
+            <li>Multi-factor authentication.</li>
+            <li>Visual Studio application insights.</li>
+            <li>SQL data warehouse.</li>
+            <Li>Virtual Network.</Li>
+            <li>Media services.</li>
+            <Li>Stream analytics.</Li>
+            <li>Azure Active Directory domain services.</li>
+            <li>Event hubs.</li>
+            <li>Data factory.</li>
+            <li>Key vault.</li>
+            <li>Managed cache service.</li>
+            <Li>Scheduler.</Li>
+            <Li>Azure DevTest Labs.</Li>
+            <li>Notification hubs.</li>
+            <li>Automation.</li>
+            <Li>Log analytics.</Li>
+            <Li>Security center.</Li>
+            <li>BizTalk services.</li>
+            <li>Traffic manager.</li>
+            <Li>Azure container service.</Li>
+            <li>Functions.</li>
+            <li>Logic apps.</li>
+            <li>Cortana intelligence.</li>
+            <li>IoT Suite.</li>
+            <li>Operations management suite.</li>
+            <li>Encoding.</li>
+            <li>Content protection.</li>
+            <li>Web apps.</li>
+            <li>Mobile apps.</li>
+            <Li>API apps.</Li>
+            <li>Media analytics.</li>
+            <Li>Queue storage.</Li>
+            <Li>File storage.</Li>
+            <li>Tables storage.</li>
+          </ul>
+        </td>
+        <td>
+          Compute:
+          <ul>
+            <li>Compute Engine.</li>
+            <li>App Engine.</li>
+            <li>Container Engine.</li>
+            <li>Container Registry.</li>
+            <li>Cloud Functions.</li>
+          </ul>
+          Storage and Databases:
+          <ul>
+            <Li>Cloud Storage.</Li>
+            <li>Cloud Bigtable.</li>
+            <Li>Cloud Datastore.</Li>
+            <li>Cloud SQL.</li>
+          </ul>
+          Networking:
+          <ul>
+            <li>Cloud Virtual Network.</li>
+            <li>Cloud Load Balancing.</li>
+            <li>Cloud CDN.</li>
+            <li>Cloud Interconnect.</li>
+            <li>Cloud DNS.</li>
+          </ul>
+          Big Data:
+          <ul>
+            <li>BigQuery.</li>
+            <li>Cloud Dataflow.</li>
+            <li>Cloud Dataproc.</li>
+            <Li>Cloud Datalab.</Li>
+            <li>Cloud Pub/Sub</li>
+            <li>Genomics.</li>
+          </ul>
+          Machine Learning:
+          <ul>
+            <Li>Cloud Machine Learning Platform.</Li>
+            <li>Vision API.</li>
+            <li>Speech API.</li>
+            <li>Natural Language API.</li>
+            <li>Translate API.</li>
+          </ul>
+          Management Tools:
+          <ul>
+            <li>Stackdriver.</li>
+            <li>Monitoring.</li>
+            <li>Logging.</li>
+            <li>Error Reporting.</li>
+            <Li>Trace.</Li>
+            <Li>Debugger.</Li>
+            <li>Deployment Manager.</li>
+            <Li>Cloud Console.</Li>
+            <li>Cloud Shell.</li>
+            <li>Cloud Mobile App.</li>
+            <li>Billing API.</li>
+            <li>Cloud APIs.</li>
+          </ul>
+          Developer Tools:
+          <ul>
+            <li>Cloud SDK.</li>
+            <Li>Deployment Manager.</Li>
+            <Li>Cloud Source Repositories.</Li>
+            <Li>Cloud Enpoints.</Li>
+            <Li>Clout Tools for Android Studio.</Li>
+            <li>Cloud Tools for IntelliJ.</li>
+            <li>Cloud Tools for PowerShell.</li>
+            <li>Cloud Tools for Visual Studio.</li>
+            <Li>Google Plug In for Eclipse.</Li>
+            <li>Cloud Test Lab.</li>
+          </ul>
+          Identity & Security:
+          <ul>
+            <li>Cloud IAM.</li>
+            <li>Cloud Resource Manager.</li>
+            <li>Cloud Security Scanner.</li>
+            <Li>Cloud Platform Security Overview.</Li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Cost</td>
+        <td>Per hour - rounded up.<br>
+        On demand, reserved and spot.</td>
+        <td>Per minute - rounded up commitments (pre-paid or monthly).<br>
+        On demmand - short term commitments.</td>
+        <td>Per minute - rounded up (minimum 10 minutes).<br>
+        On demand - sustained use.</td>
+      </tr>
+      <tr>
+        <td>Regions</td>
+        <td>
+          <ul>
+            <li>US East (N. Virgina).</li>
+            <li>US West (N. California).</li>
+            <Li>US West (Oregon).</Li>
+            <li>Asia Pacific (Mumbai).</li>
+            <li>Asia Pacific (Seoul).</li>
+            <li>Asia Pacific (Sydney).</li>
+            <li>Asia Pacific (Tokyo).</li>
+            <li>EU (Frankfurt).</li>
+            <li>EU (Ireland).</li>
+            <li>South America (Sao Paulo).</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>Central US (Iowa).</li>
+            <Li>US East (Virginia).</Li>
+            <Li>US Gov (Iowa).</Li>
+            <Li>US Gov (Virginia).</Li>
+            <li>US North Central (Illinois).</li>
+            <Li>US South Central (Texas).</Li>
+            <Li>US West (California).</Li>
+            <li>EU (Ireland).</li>
+            <li>EU (Netherlands).</li>
+            <li>Asia Pacific (Hong Kong).</li>
+            <Li>Asia Pacific (Singapore).</Li>
+            <li>Asia Pacific (Japan).</li>
+            <li>South America (Sao Paulo).</li>
+            <Li>Australia East.</Li>
+            <li>Australia West.</li>
+            <li>South India.</li>
+            <Li>Central India.</Li>
+            <li>West India.</li>
+            <li>China East.</li>
+            <Li>China North.</Li>
+            <Li>Canada Central.</Li>
+            <li>Canada East.</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>US West (x2).</li>
+            <li>US East (x3).</li>
+            <Li>US Central (x4).</Li>
+            <li>Western Europe (x3).</li>
+            <li>Eastern Asia (x3).</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Pros</td>
+        <td>
+          <ul>
+            <li>Elasticity.</li>
+            <li>Reliability.</li>
+            <li>Security.</li>
+            <li>Storage is inexpensive.</li>
+            <li>Very fast implementation.</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>Cloud apps are the same as on-premise apps.</li>
+            <li>Hybrid deployment scenarios.</li>
+            <li>Support rival platforms and mobile products.</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>Modern fast UI.</li>
+            <li>Sustained discounts.</li>
+            <li>100% carbon neutral.</li>
+            <li>Leading the container hosting push.</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Cons</td>
+        <td>
+          <ul>
+            <li>Significant history of outages.</li>
+            <Li>Retrieval can be slow if you do not pay for quick downloads.</Li>
+            <li>You pay for activity, not storage.</li>
+            <Li>Communications between EDM and AWS can be difficult to set up.</Li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>Focuses most on Microsoft products.</li>
+            <Li>Long-term company roadmap looks bumpy.</Li>
+            <li>Microsoft is not the innovator in this scenario.</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>Networking pricing is expensive.</li>
+            <li>The product feels experimental.</li>
+            <li>Product range is limited compared to AWS and Azure.</li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </p>
+  <p>
+    Resources used:
+    <ul>
+      <li><a href="http://cloudacademy.com/blog/public-cloud-war-aws-vs-azure-vs-google/">Cloud Academy.</a></li>
+    </ul>
+  </p>
+</section>
+
+<section id="question7">
+  <h2>7. Read at least 5 sections of Seth Godin’s Manifesto: “Stop Stealing Dreams” and tell me what you think about it.
+    <b>10 points.</b></h2>
+  <p></p>
+</section>

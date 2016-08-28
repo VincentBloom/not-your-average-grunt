@@ -43,5 +43,8 @@
   },
   "scripts": {
     "test": "karma start test/karma.conf.js"
+  },
+  "dependencies": {
+    "font-awesome": "^4.6.3"
   }
 }
