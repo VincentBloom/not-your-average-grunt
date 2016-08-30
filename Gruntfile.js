@@ -496,7 +496,7 @@ module.exports = function (grunt) {
     });
   });
 
-  grunt.registerTask('S3-sync', [
+  grunt.registerTask('s3-sync', [
     'build',
     'deployToS3'
   ]);
