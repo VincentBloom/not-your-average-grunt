@@ -31,4 +31,3 @@ request('https://api.nasa.gov/planetary/apod?api_key=' + key, function(err, resp
   }).pipe(dest);
 
 });
-
