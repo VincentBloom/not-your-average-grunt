@@ -22,7 +22,7 @@ request('https://api.nasa.gov/planetary/apod?api_key=' + key, function(err, resp
   // Logging the picture of the day's title.
   console.log("APOD (Astronomical Picture Of the Day): " + content.title);
 
-  // Creating a write stream to write the picture of the day into. Using the title of the picture.
+  // Creating a write stream to write the picture of the day into. Using the title of the picture of the day.
   var dest = fs.createWriteStream('apod/' + content.title.replace(/\s+/g, '-') + '.jpg');
 
   // Making an HTTP request to capture the image in buffer and save it to file asynchronously.
