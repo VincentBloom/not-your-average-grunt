@@ -8,7 +8,7 @@ var request = require('request');
 var fs = require('fs');
 
 // Reading NASA developer key from external file.
-var contents = fs.readFileSync('apodAPIKey.json');
+var contents = fs.readFileSync('apodKey.json');
 
 // Extracting the key.
 var key = JSON.parse(contents).key;
