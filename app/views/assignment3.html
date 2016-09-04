@@ -1,0 +1,129 @@
+<h1>Assignment 3</h1>
+<caption>Due date: 2016-08-27</caption>
+<caption>Vincent Bernard Bloom #18462</caption>
+<caption>GitHub: <a href="https://github.com/VincentBloom/not-your-average-grunt" target="_blank">not-your-average-grunt
+</a>.</caption>
+<hr>
+
+<section id="question1">
+  <h2>1. Create a NodeJS script that will do the following:
+    <ul>
+      <li>Download an image from S3.</li>
+      <Li>Check if the metadata key "Move" of the image is true.</Li>
+      <li>If true, upload the image to s3://cc116-assignment3/{STUDENT ID}/image.png</li>
+    </ul><b>20 points.</b></h2>
+  <p>Visit my GitHub to view code!
+    <a href="https://github.com/VincentBloom/not-your-average-grunt/blob/master/assignments/save-bucket-image-to-disk.js"
+       target="_blank">save-bucket-image-to-disk.js</a>
+    Resources used:
+    <ul>
+      <li><a href="https://gist.github.com/techgaun/cf37344a758f377a313f">Techgaun on uploading images to s3</a>.</li>
+      <li><a href="http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#upload-property">AWS SDK
+        API Documentation for S3</a>.</li>
+      <li><a href="http://docs.aws.amazon.com/AWSJavaScriptSDK/guide/node-examples.html">AWS SDK Guide Node example for
+      streaming objects to files on disk</a>.</li>
+    </ul>
+  </p>
+</section>
+
+<section id="question2">
+  <h2>2. Create a NodeJS script that will do the following:
+    <ul>
+      <li>Will get the Nasa Astronomic Picture of the day.</li>
+      <Li>Save the image in the local ﬁle system.</Li>
+      <li>Print the title of the image. </li>
+    </ul><b>20 points.</b></h2>
+  <p>Visit my GitHub to view code!
+    <a href="https://github.com/VincentBloom/not-your-average-grunt/blob/master/assignments/adop.js"
+       target="_blank">adop.js</a>
+    Resources used:
+  <ul>
+    <li><a href="https://api.nasa.gov/#live_example">NASA API example</a>.</li>
+    <li><a href="http://blog.modulus.io/node.js-tutorial-how-to-use-request-module">How to use NodeJS request
+    module</a>.</li>
+    <li><a href="http://stackoverflow.com/a/1983661">Removing dashes from a string</a>.</li>
+  </ul>
+  </p>
+</section>
+
+
+<section id="question3">
+  <h2>3. Implement Google Analytics in your personal web site (All teams will do the same for their Final Project).<b>
+    20 points.</b></h2>
+  <p>Visit my GitHub to view actual UA Google Analytics code! (I signed up and entered my custom code). Line 69.
+    <a href="https://github.com/VincentBloom/not-your-average-grunt/blob/master/app/index.html"
+       target="_blank">index.html</a>
+    Resources used:
+  <ul>
+    <li><a href="https://www.google.com/analytics">Google Analytics</a>.</li>
+  </ul>
+  </p>
+</section>
+
+<section id="question4">
+  <h2>4. Read and explain the following article by Martin Fowler: <a
+    href="http://martinfowler.com/articles/richardsonMaturityModel.html">
+    http://martinfowler.com/articles/richardsonMaturityModel.html</a>.<b>
+    20 points.</b></h2>
+  <div>
+    <p>Richardson Maturity Model is composed of 4 levels:</p>
+    <ul>
+      <li>Level 3: Hypermedia controls.</li>
+      <li>Level 2: HTTP Verbs.</li>
+      <li>Level 1: Resources.</li>
+      <li>Level 0: The Swamp of POX.</li>
+    </ul>
+
+    <p>As complicated as this system may seem, in reality it is a very approachable and obvious system to follow to
+    unserstand REST (Representational State Transfer).</p>
+
+    <h3>Level 0</h3>
+    <p>The simple use of HTTP (Hypertext Transfer Protocol) for the transportation of data between a client and a
+    server. It uses simple synchronous communication with a single server resource being interacted with.</p>
+
+    <h3>Level 1</h3>
+    <p>Resources, in this case, represent the actual division of content based on conceptual boundaries. Different
+    'objects' must be in their very own location as they are not part of the domain as other objects. Basically
+    introduces what can be defined as entities with their own resource locator.</p>
+
+    <h3>Level 2</h3>
+    <p>Instead of carrying out communication through simple HTTP POST (it can be done), HTTP comes with functions
+    as verbs that can make the use of services more convenient. Each verb adds semantic value to the communication,
+    which can make transfers more identifiable and erros easier to pinpoint.</p>
+
+    <h3>Level 3</h3>
+    <p>Hypermedia controls are the holy grail of HTTP. They allow developers to pave the way for user interaction
+    without the need for extensive knowledge of the system. They create a practical workflow for all the resources
+    interacting in the system. Although they are not proper parts of REST, they are important, as they add
+    another dimmension to state transfers.</p>
+  </div>
+</section>
+
+<section id="question5">
+  <h2>5. Explain why cloud computing is important.<b>10 points.</b></h2>
+  <p>Cloud computing is the greatest extension known yet to one of computing's most important machines ever built - the
+    Turing Machine. This machine revolutionized the way we think of computation. The idea that one machine had infinite
+    storage (just by switching out tapes) was amazing. Cloud computing (cloud storage in this case) builds on the
+    idea that you can have as much storage capability and that it is practically infinite.</p>
+
+  <p>Cloud computing offers services that not every person can afford to have, have the space to house, have the team
+    to maintain, have the time to build or have the money to run. It gives people the oportunity to run different types
+    of computational tasks without the need to worry of how many resources they need. It makes it very convenient for
+    any in need of cloud computing to use.</p>
+
+  <p>Cloud computing offers scientits the resources to run all sorts of operations, models, benchmarks to do their
+    research on, using up as many virtual machines as needed to solve the problems proposed.</p>
+
+  <p>Cloud computing providers are very flexible and services can be tailored and customized to one's needs.</p>
+
+</section>
+
+<section id="question6">
+  <h2>6. Exlain what would like to change in this class and why.<b>10 points.</b></h2>
+  <p>I wish that we had more class hours. I feel that the pace of the teacher is too fast, and slowing down just for
+  me is making the group unable to go through all the class' contents. It would be awesome to have a couple of more
+  hours a week of session, so that we can cope with our learning curve and learn all of the proposed content.</p>
+
+  <p>I would also ask for a change in candy selection. I like Kit-Kats, but bigger prizes, such as Doritos® Cool
+  Ranch® would be awesome to win!</p>
+</section>
