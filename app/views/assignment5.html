@@ -1,0 +1,78 @@
+<h1>Assignment 5</h1>
+<caption>Due date: 2016-10-01</caption>
+<caption>Vincent Bernard Bloom #18462</caption>
+<caption>GitHub: <a href="https://github.com/VincentBloom/not-your-average-grunt" target="_blank">not-your-average-grunt
+</a>.</caption>
+<hr>
+
+<section id="question1">
+  <h2>1.  Create a web app to be able to get the weather of N cities at the same time. The list of cities are going to
+    be text separated by commas and will connect to an end point that will trigger lambdas for each cities.
+    <b>90 points.</b></h2>
+
+
+  <h3>Cities weather!</h3>
+  <input type="text" ng-model="cities"/>
+  <p>{{cities}}</p>
+  <button ng-click="getCities()">Get weather!</button>
+  <p>{{result}}</p>
+
+  <p>I could not deploy the API. I do not know why. I got this error message while attempting to:</p>
+  <pre><code>
+Serverless: Select the assets you wish to deploy:
+
+      citiesWeather
+           - endpoint - citiesWeather/{cities} - GET
+
+  </code></pre>
+
+  <pre><code>
+Serverless: Deploying the specified functions in "dev" to the following regions: us-east-1
+Serverless: ------------------------
+Serverless: Failed to deploy the following functions in "dev" to the following regions:
+Serverless: us-east-1 ------------------------
+Serverless:   citiesWeather: Cant find AWS credentials
+  </code></pre>
+
+  <p>I tried workarounds, such as creating the API directly through AWS console. However, none of my attempts worked,
+  as I had distribution errors mostly involving dependencies.</p>
+  <p>I had other errors before, but I coult not replicate the scenarios.</p>
+  <p>A few tries:</p>
+  <ul>
+    <li>Package node_modules with the lambda in a zip and uploading them in Lambda.</li>
+    <li>Create a factory for AWS Lambda in AngularJS.</li>
+  </ul>
+
+  <p>Code for the assignments:</p>
+  <ul>
+    <li><a href="https://github.com/VincentBloom/not-your-average-grunt/tree/master/assignments/A5/citiesWeather">
+      citiesWeather</a>.</li>
+    <li><a href="https://github.com/VincentBloom/not-your-average-grunt/tree/master/assignments/A5/cityWeather">
+      citiesWeather</a>.</li>
+  </ul>
+
+  <p>Resources:</p>
+  <ul>
+    <li></li>
+  </ul>
+
+</section>
+
+<section id="question2">
+  <h2>2. List the 3 main things you need to do in order achieve your professional goals. <b>10 points.</b></h2>
+  <p>At the moment, I do not have concrete professional goals. The only goal I have is to obtain my degree as
+    a Computer Scientist and Engineer, which would be the first traditional step towards achieving professional goals
+    for any other professional.
+  </p>
+  <p>More than a professional, I wish to be an agent of change in whatever community I happen to reside in (in the
+  future), an advocate of my community.</p>
+  <p>A few goals there:</p>
+  <ul>
+    <li>Create an organization to help teenagers and young adults with dealing with their social anxiety and lack
+    of practical living experience.</li>
+    <li>Promote  production and consumption of local foods and goods.</li>
+    <li>Create a self-sustaining community capable of living off of its own resources, and bringing external commerce
+    to be able to grow at a regulated pace.</li>
+  </ul>
+
+</section>

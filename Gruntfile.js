@@ -482,16 +482,16 @@ module.exports = function (grunt) {
     'build'
   ]);
 
-  grunt.registerTask('deployToS3', 'Deploying to S3 bucket', function(target){
+  grunt.registerTask('deployToS3', 'Deploying to S3 bucket', function(){
     var done = this.async();
     var command = "/usr/local/bin/aws";
 
-    var child = grunt.util.spawn({
+    grunt.util.spawn({
       cmd: command,
-      args: 's3 sync --acl=public-read dist s3://not-your-average-grunt'.split(" "),
+      args: 's3 sync --acl=public-read dist s3://not-your-average-grunt'.split(" ")
     }, function(error, result, code){
-      if(code != 0 && error !== null) grunt.fatal("Error sycing with S3 bucket.");
-      grunt.log.writeln(String(result).trim());
+      if(code !== 0 && error !== null) { grunt.fatal("Error sycing with S3 bucket."); }
+        grunt.log.writeln(String(result).trim());
       done();
     });
   });
