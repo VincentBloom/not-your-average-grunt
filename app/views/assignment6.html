@@ -1,0 +1,62 @@
+<h1>Assignment 6</h1>
+<caption>Due date: 2016-10-08</caption>
+<caption>Vincent Bernard Bloom #18462</caption>
+<caption>GitHub: <a href="https://github.com/VincentBloom/not-your-average-grunt" target="_blank">not-your-average-grunt
+</a>.</caption>
+<hr>
+
+<section id="question1">
+  <h2>1.  Create a web app to be able to send message to a speciﬁc Slack channel. The web app will have:</h2>
+  <ul>
+    <li>HTML View + angular controller to call your own end point.</li>
+    <li>API Gateway end point available to the world with an application key (you will generate this app key in AWS
+      Console).</li>
+    <li>Lambda integrated with API Gateway end point that will log the action and post the message to the Slack channel.
+    </li>
+    <li>Integration with Github, so every time a push is made to the repo it will post a message to the team group.</li>
+  </ul>
+  <h2><b>100 points.</b></h2>
+
+  <form>
+    <div class="form-group">
+      <label for="alias">Alias to post as</label>
+      <input type="text" maxlength="15" class="form-control" id="alias" placeholder="Alias">
+    </div>
+    <div class="form-group">
+      <label for="message">Message</label>
+      <input type="text" maxlength="150" class="form-control" id="message" placeholder="Message">
+    </div>
+    <button type="submit" class="btn btn-default" ng-click="sendMessage()">Send message to Slack!</button>
+  </form>
+
+  <p>{{response}}</p>
+
+  <p></p>
+
+  <p>Code for the assignments:</p>
+  <ul>
+    <li><a href="https://github.com/VincentBloom/not-your-average-grunt/tree/master/assignments/A5/citiesWeather">
+      citiesWeather</a>.</li>
+    <li><a href="https://github.com/VincentBloom/not-your-average-grunt/tree/master/assignments/A5/cityWeather">
+      citiesWeather</a>.</li>
+  </ul>
+
+  <p>Resources:</p>
+  <ul>
+    <li><a href="http://stackoverflow.com/a/6432824">Post data with NodeJS request module</a>.</li>
+    <li><a href="https://aws.amazon.com/blogs/compute/dynamic-github-actions-with-aws-lambda/">Dynamic GitHub Actions
+      with AWS Lambda</a>.</li>
+    <li><a href="https://api.slack.com/incoming-webhooks#advanced_message_formatting">Advanced Slack Webhook formatting
+    </a>.</li>
+    <li><a href="http://docs.aws.amazon.com/sns/latest/dg/CreateTopic.html">Create SNS topics</a>.</li>
+    <li><a href="http://docs.aws.amazon.com/sns/latest/dg/sns-lambda.html">Invoking Lambda functions using Amazon SNS
+    notifications</a>.</li>
+    <li><a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-api-keys.html">Use API Keys in API
+    Gateway without Usage Plans Enabled</a>.</li>
+    <li><a href="http://docs.aws.amazon.com/sns/latest/dg/CreateTopic.html">Create SNS topics</a>.</li>
+    <li><a href="http://1000hz.github.io/bootstrap-validator/">Bootstrap form validation</a>.</li>
+    <li><a href="http://techfunda.com/howto/565/http-post-server-request">$http.post server request in AngularJS</a>.
+    </li>
+  </ul>
+
+</section>
