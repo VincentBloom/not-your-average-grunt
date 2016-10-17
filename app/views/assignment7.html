@@ -1,0 +1,106 @@
+<h1>Assignment 6</h1>
+<caption>Due date: 2016-10-15</caption>
+<caption>Vincent Bernard Bloom #18462</caption>
+<caption>GitHub: <a href="https://github.com/VincentBloom/not-your-average-grunt" target="_blank">not-your-average-grunt
+</a>.</caption>
+<hr>
+
+<section id="question1">
+  <h2>1. Create a module inside the web app to get the average temperature by city. This
+    includes:</h2>
+  <ul>
+    <li>Modify single weather lambda function to save temp in DynamoDB.</li>
+    <li>Create lambda function to get all temperatures from DynamoDB and
+      calculate the average.</li>
+    <li>Create an API Gateway end point integrated with the average
+      temperature lambda.</li>
+    <li>Modify your web app to get the average temperatures.</li>
+  </ul>
+  <h2><b>50 points.</b></h2>
+
+  <p>Code for the assignment:</p>
+  <ul>
+    <li><a href="https://github.com/VincentBloom/not-your-average-grunt/tree/master/assignments/A7/weather-multiple"
+           target="_blank">
+      Weather Multiple</a>.</li>
+    <li><a href="https://github.com/VincentBloom/not-your-average-grunt/tree/master/assignments/A7/lib/WeatherHelper.js"
+           target="_blank">
+      WeatherHelper.js</a>.</li>
+    <li><a href="https://github.com/VincentBloom/not-your-average-grunt/tree/master/assignments/A7/lib/DynamoHelper.js"
+           target="_blank">
+      DynamoHelper.js</a>.</li>
+  </ul>
+</section>
+
+<section id="question2">
+  <h2>2. Add security to the average temperatures end point (Implement Custom Authorizers). <b>50 points</b>.</h2>
+
+  <p>Code for the assignment:</p>
+  <ul>
+    <li><a href="https://github.com/VincentBloom/not-your-average-grunt/tree/master/assignments/A7/login"
+           target="_blank">
+      Login</a>.</li>
+    <li><a href="https://github.com/VincentBloom/not-your-average-grunt/tree/master/assignments/A7/vincent-authorizer"
+           target="_blank">
+      Authorizer</a>.</li>
+    <li><a href="https://github.com/VincentBloom/not-your-average-grunt/tree/master/assignments/A7/weather-secure"
+           target="_blank">
+      Weather Secure</a>.</li>
+  </ul>
+
+</section>
+
+<section id="code">
+  <h2>App</h2>
+  <h3>Login</h3>
+  <form class="form-inline">
+    <div class="row">
+      <div class="col-xs-6">
+        <button type="submit" class="btn btn-default btn-block" ng-click="login(true)">Valid login</button>
+      </div>
+      <div class="col-xs-6">
+        <button type="submit" class="btn btn-default btn-block" ng-click="login(false)">Invalid login</button>
+      </div>
+    </div>
+  </form>
+
+  <p>Status: <b>{{ isValid }}</b></p>
+
+  <h3>Add cities</h3>
+  <form>
+    <div class="form-group">
+      <label for="citiesBox">Add cities separated by commas:</label>
+      <input type="text" class="form-control" id="citiesBox" ng-model="citiesBox" placeholder="Cities...">
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <button type="submit" class="btn btn-default btn-block" ng-click="putCities()">Save cities</button>
+      </div>
+    </div>
+  </form>
+
+  <h3>Get cities</h3>
+  <form class="form">
+    <div class="row">
+      <div class="col-xs-12">
+        <button type="submit" class="btn btn-default btn-block" ng-click="getCities()">Get cities' average temperature
+        </button>
+      </div>
+    </div>
+  </form>
+  <table class="table" ng-show="cities.length>0">
+    <thead>
+    <tr>
+      <th>City</th>
+      <th>Average Temperature (Kelvin)</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="city in cities">
+      <td>{{city.City}}</td>
+      <td>{{city.Average}}</td>
+    </tr>
+    </tbody>
+  </table>
+
+</section>
