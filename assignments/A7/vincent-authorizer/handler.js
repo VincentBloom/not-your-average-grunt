@@ -5,7 +5,7 @@ var jwt = require("jsonwebtoken");
 module.exports.handler = function(event, context, cb) {
 
   var policy = {
-    "principalId": "arn:aws:iam::717454164754:user/jax.jaquez@gmail.com",
+    "principalId": "arn:aws:iam::71745416",
     "policyDocument": {
       "Version": "2012-10-17",
       "Statement": [
