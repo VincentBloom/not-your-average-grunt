@@ -1,0 +1,221 @@
+<h1>1. Read the Well Architected Framework white paper from Amazon Web Services
+  and write a summary about it in your personal web site. <b>100 points</b>.</h1>
+
+<h2>About the document</h2>
+
+<p>Title: AWS Well-Architected Framework</p>
+
+<p>Date of revision: October 2015.</p>
+
+<p>Written by the following contributors:</p>
+
+<ul>
+  <li>Philip Fitzsimons.</li>
+  <li>Erin Rifkin, Senior Program Manager.</li>
+  <li>Callum Huges, Solution Architect.</li>
+  <li>Max Ramsay. Principal Security Solutions Architect.</li>
+  <li>Scott Paddock, Security Solutions Architect.</li>
+</ul>
+
+<p>URL: <a
+  href="http://d0.awsstatic.com/whitepapers/architecture/AWS_WellArchitected_Framework.pdf">
+  http://d0.awsstatic.com/whitepapers/architecture/AWS_WellArchitected_Framework.pdf</a></p>
+
+
+<h2>Introduction</h2>
+
+<p >Architecting solutions throughout a vast amount of
+  businesses and use cases, AWS has identified the best practices and core
+  strategies for cloud architecture.</p>
+
+<h2>Definition of the AWS Well-Architected Framework</h2>
+
+<ul>
+  <li>Making architectural trade-offs as your designs evolve.</li>
+  <li>Set of questions to evaluate how well an architecture is aligned to AWS best practices.</li>
+</ul>
+
+<h2>General Design Principles</h2>
+
+<ul>
+  <li>Stop guessing your capacity needs. AWS cloud computing scales up and down automatically.</li>
+  <li>Test systems at production scale. You can create realistic environments on demand using the cloud to run tests on.
+  </li>
+  <li>Lower the risk of architecture change. With the ease of testing comes the automation of configurations.</li>
+  <li>Automate to make architectural experimentation easier. Create and replicate systems at low cost with no manual
+    effort.</li>
+  <li>Allow for evolutionary architectures. Again, by being able to do automated testing, systems can evolve as
+    innovations arise.</li>
+</ul>
+
+<h2>The Four Pillars of the Well-Architected Framework</h2>
+
+<p>Using the pillars to aid in the production of stable and efficient systems. Focus on functional requirements
+  instead of non-functional requirements.</p>
+
+<h3>Security Pillar</h3>
+
+<ul>
+  <li>Protect information, systems and assets.</li>
+  <li>Risk assessments and mitigation strategies.</li>
+</ul>
+
+<h4>Design Principles</h4>
+
+<ul>
+  <li><b>Apply security at all layers</b>: and on all resources.</li>
+  <li><b>Enable traceability</b>: Log and audit movements in the environment.</li>
+  <li><b>Automate responses to security events</b>: Automate responses to event-driven or condition-driven alerts.</li>
+  <li><b>Focus on securing your system</b>: Make use of AWS security services, using the AWS Shared Responsibility
+  Model.</li>
+  <li><b>Automate security best practices</b>: Create infrastructure (virtual servers) based on instantiations of a
+    template.</li>
+</ul>
+
+<h4>Best Practices</h4>
+
+<p><b>Data protection</b>, which consists in exercise of
+  controls and patterns based on confidentiality while keeping integrity and
+  availability; policies focused on security must be considered vital in the
+  architecture of the system; </p>
+
+<p><b>Privacy Management</b>, which is the use of a set of four
+  services (Access Control List, Role-Based Access Controls, Identity and Access
+  Management, and Multi-Factor Authentication) to ensure that users have been
+  correctly authenticated and authorized to access resources and services; </p>
+
+<p><b>Infrastructure Protection</b>, which is enforcing
+  boundary protection, monitoring gates of data transfer, logging and alerting
+  for all movements are key to protect the infrastructure; </p>
+
+<p>and finally, <b>Detective Controls</b>, designed to detect
+  or identify security breaches, reacting to defined conditions of breach, having
+  native services (AWS CloudTrail, Amazon CloudWatch, AWS Config, Amazon Simple
+  Storage Service (data access auditing), and Amazon Glacier (long-term retention
+  of critical data)).</p>
+
+<h3>Reliability Pillar</h3>
+
+<ul>
+<li>System recovery from, and mitigation, of infrastructure or service disturbances.</li>
+<li>Gathering resources to meet demand.</li>
+</ul>
+
+<h4>Design Principles</h4>
+
+<ul>
+  <li><b>Test recovery procedures</b>: Test system failures within on
+    premise environments, reducing the chance of components failing.</li>
+  <li><b>Automatic recovery from failure</b>: Trigger automation once
+    thresholds are breached.</li>
+  <li><b>Scale horizontally to increase aggregate systems availability</b>:
+    Break down large resources and monoliths into small distributed resources for resilience.</li>
+  <li><b>Stop guessing capacity</b>: Prevent resource saturation and
+    scale on-demand.</li>
+</ul>
+
+<h4>Best practices</h4>
+
+<p><b>Foundations</b>. Specify foundational requirements that
+  influence reliability. Establish governance and monitoring processes to throttle
+  AWS native service limits. Be open to accepting a hybrid program, with shared
+  resources across AWS Cloud and on-premise resources.</p>
+
+<p><b>Change Management</b>. Plan proactively by predicting possible
+  changes and its effects. Identify trends that lead to capacity problems or Service-Layer
+  Agreement breaches. The adding and removing of resources should be prevised
+  while architecting a system, as well as availability and reliability of
+  service.</p>
+
+<p><b>Failure Management</b>. Automatically become aware of
+  failures and causes for them to prevent them from happening again. Replace
+  failed resources with new ones while analyzing cause of failure of the
+  problematic one. Regularly back up and test such data to ensure recovery from
+  both physical and logical error. Thoroughly test failure-response services to
+  ensure that the system can run even through errors in any one or many of the
+  components.</p>
+
+<h3>Performance Efficiency Pillar</h3>
+
+<ul>
+  <li>Efficient and effective use of computing resources.</li>
+  <li>Scalability of performance as technologies evolve.</li>
+</ul>
+
+<h4>Design Principles</h4>
+
+<ul>
+  <li><b>Democratize advanced technologies: </b>Consume new technologies as they come available, relying on AWS to know
+    how it works and how to implement it internally.</li>
+  <li><b>Go global in minutes</b>: Easily deploy on a worldwide scale.</li>
+  <li><b>Use server less architectures</b>: Forget about running and maintain servers for computing activities.</li>
+  <li><b>Experiment more often</b>: Rely on virtual and automatable resources.</li>
+</ul>
+
+<h4>Best practices</h4>
+
+<p><b>Compute</b>. Selecting the correct server configurations
+  for every use case. AWS allows so as servers are virtualized and modifications
+  are made easily. Use serverless functions, such as AWS Lambda to compute. Know
+  what type of approach the data must be treated with, using monitoring to know performance
+  degradation.</p>
+
+<p><b>Storage</b>. Access methods, patterns of access,
+  throughput, frequency of access and update, availability and durability are the
+  key points of interest when considering what type of storage should be used.
+  Evaluate cost/value margin for each workload on different types of storage to
+  recognize the best options. </p>
+
+<p><b>Database</b>. Consistency, availability, partition
+  tolerance and latency are the key points of interest in recognizing database
+  requirements. Databases should be thought out as conde rather than fixed
+  choices. Test data should always be used to suit each type of workload. </p>
+
+<p><b>Space-Time trade-off</b>. Memory or storage vs. computing
+  or time. Scatter read-only resources to improve end-user availability and
+  speed. Test data must recognize trade-offs that work for workloads.</p>
+
+<h3>Cost Optimization Pillar</h3>
+
+<ul>
+  <li>Avoid and eliminate redundant costs or suboptimal resources.</li>
+  <li>Pay the lowest price while meeting business goals and ensuring Well-Architected Pillars.</li>
+</ul>
+
+<h4>Design Principles</h4>
+
+  <ul>
+  <li><b>Transparently attribute expenditure</b>: Monitor return on investment for each client and incentivize resource
+    optimization.</li>
+  <li><b>Use managed services to reduce cost of ownership</b>: Common tasks should be handled by AWS servers as these
+    are specifically built for them, such as email and database management.</li>
+  <li><b>Trade capital expense for operating expense</b>: Pay only for computing resources you consume on demand,
+    removing any cost overhead.</li>
+  <li><b>Benefit from economies of scale</b>: Since AWS handles thousands of customers, aggregation saves them and you
+    cost.</li>
+  <li><b>Stop spending money on data center operations</b>: Without the need of worrying for racking stacking and
+    powering servers.</li>
+</ul>
+
+<h4>Best practices</h4>
+
+<p><b>Matches Supply and Demand</b>. Automatically provision
+  resources to match demand, using AWS auto-scaling and time, event and queue
+  driven approaches. Monitoring and bench-marking can help make resources more
+  efficient, which translates to money-saving.</p>
+
+<p><b>Cost-Effective Resources</b>. Using the correct instances
+  and resources for given needs. Use On-Demand, Reserved or Spot Instances to
+  best suit availability needs. To ensure this, review and monitor resource
+  utilization. Managed AWS services reduces per-item costs. CDN solutions reduce
+  network traffic costs.</p>
+
+<p><b>Expenditure Awareness</b>. Passive and conservative
+  development can sometimes lead to solutions that may not be modern, therefore,
+  the most cost-efficient. Exploit the elasticity of the cloud to truly know what
+  approaches to take. Used tags on AWS resources to manage different expenditure
+  types. Monitor orphan processes to reduce costs.</p>
+
+<p><b>Optimizing Over Time</b>. Reassess architectural
+  decisions based on AWS new releases of technology and services. Decommission
+  unused or deprecated resources, services or even systems.</p>
